@@ -25,7 +25,6 @@ const App = () => {
 	// console.log(currencyOptions);
 	// console.log(exchangeRate);
 
-	// using async/await and axios
 	useEffect(() => {
 		const fetchAPI = async () => {
 			const { data } = await axios.get(BASE_URL);
@@ -52,13 +51,6 @@ const App = () => {
 		}
 
 	}, [fromCurrency, toCurrency]);
-
-	// using then/then on Promises
-	// useEffect(() => {
-	// 	fetch(BASE_URL)
-	// 		.then(res => res.json())
-	// 		.then(data => console.log(data));
-	// }, []);
 
 	const handleFromAmountChange = e => {
 		setAmount(e.target.value);
